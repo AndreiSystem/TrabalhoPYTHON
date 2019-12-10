@@ -16,6 +16,7 @@ app = Flask(__name__)
 def inicio():
     start = FuncionariosDao()
     listar_agora = start.listar()
+ 
     return render_template('home.html', lista = listar_agora)
 
 @app.route('/cadastrar')
