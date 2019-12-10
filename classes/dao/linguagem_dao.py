@@ -1,29 +1,30 @@
 from conexao import Conexao
 
+
 class LinguagemDao(Conexao):
 
     def listar(self):
         self.cursor.execute(f'SELECT * FROM equipe')
         lista = self.cursor.fetchall()
         return lista
-    
-    def inserir(self, projeto):
+
+    def inserir_linguagem(self, linguagem):
         self.cursor.execute(
-            f'INSERT INTO equipe(projeto) values("{projeto}")')
+            f'INSERT INTO linguagem(linguagem_programacao) values({linguagem})')
         self.connection.commit()
-    
+
     def deletar_id(self, id):
         self.cursor.execute(
-            f'DELETE FROM equipe WHERE id = {id}')
+            f'DELETE FROM linguagem WHERE id = {id}')
         self.connection.commit()
-    
-    def alterar(self, id, projeto):
+
+    def alterar(self, id, linguagem):
         self.cursor.execute(
-            f'UPDATE equipe SET projeto = "{projeto}" WHERE id = {id}')
+            f'UPDATE linguagem SET linguagem_programacao = "{linguagem}" WHERE id = {id}')
         self.connection.commit()
-    
-    def buscar_por_id(self, id):
+
+    def buscar_linguagem_id(self, id):
         self.cursor.execute(
-            f'SELECT * FROM equipe WHERE id = {id}')
+            f'SELECT * FROM linguagem WHERE id = {id}')
         equipe = self.cursor.fetchone()
         return equipe
