@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block content  %}
+<h1>ADICIONAR NOVA EQUIPE</h1>
+<div class="form">
+    <form action="/salvar_equipe" method="POST">
+        <div class="box-name" style="margin-bottom: 20px">
+            <label for="equipe">Linguagem: </label>
+            <input type="text" name="equipe" id="equipe" required>
+        </div>
+        <input class="btn-salvar" type="submit" value="Salvar">
+    </form>
+</div>
+
+{% endblock %}

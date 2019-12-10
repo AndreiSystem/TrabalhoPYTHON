@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+{% block content  %}
+<h1 style="margin: 1%;">CADASTRO DE FUNCIONÁRIO</h1>
+<div class="div-form">
+    <form action="/salvar" method="POST" class="form-div">
+        <div class="box-id " id="disabledInput">
+            <label for="id">id: </label>
+            <input type="text" readonly name="id" id="id" value="none" required>
+        </div>
+        <div class="box-name">
+            <label for="name">Nome: </label>
+            <input type="text" name="nome" id="name" required>
+        </div>
+
+        <div class="box-idade">
+            <label for="idade">Idade: </label>
+            <input type="text" name="idade" id="idade" required>
+        </div>
+        <div class="box-idade">
+                <label for="idade">Cpf: </label>
+                <input type="text" name="cpf" id="cpf" required>
+            </div>
+        <div class="box-cargo">
+            <label for="cargo">Cargo: </label>
+            <input type="text" name="cargo" id="cargo" required>
+        </div>
+        <div class="box-carga_horaria">
+            <label for="carga_horaria">Carga horária: </label>
+            <input type="text" name="carga_horario" id="carga_horaria" required>
+        </div>
+        <div class="box-salario">
+            <label for="salario">salario: </label>
+            <input type="text" name="salario" id="salario" required>
+        </div>
+        <select class="box-linguagem " name="linguagem_id">
+            <option selected><strong>SELECIONE UMA LINGUAGEM</strong></option>
+            {% for linguagem in lista_linguagem: %} 
+                <option value="{{linguagem[0]}}">{{linguagem[1]}}</option> 
+            {% endfor %}
+
+        </select>
+        <select class="box-equipe" name="equipe_id">
+            <option><strong>SELECIONE A EQUIPE</strong></option> 
+            {% for equipe in lista_equipe %}
+                <option value="{{equipe[0]}}">{{equipe[1]}}</option> 
+            {% endfor %}
+
+        </select>
+        <input class="btn-salvar" type="submit" value="Salvar">
+    </form>
+</div>
+
+
+
+{% endblock %}

@@ -1,4 +1,4 @@
-from conexao import Conexao
+from .conexao import Conexao
 
 
 class EquipesDao(Conexao):
@@ -32,3 +32,15 @@ class EquipesDao(Conexao):
             f'SELECT * FROM equipe WHERE id = {id}')
         equipe = self.cursor.fetchone()
         return equipe
+
+    def buscar_id_equipe(self,id):
+        self.cursor.execute(
+            f'SELECT id FROM equipe WHERE id = {id}')
+        id_equipe = self.cursor.fetchone()
+        return id_equipe
+    
+"""
+    def dados_equipes(self):
+        self.cursor.execute(f'select f.nome, e.projeto, e.squad, l.linguagem_programacao from funcionario f join equipe e join linguagem l
+on e.id = f.fk_equipe and l.id = f.fk_linguagem')
+"""

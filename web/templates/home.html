@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% block content  %}
+<div class="container">
+    <p><a href="/cadastrar" class="btn-button"><strong>Novo funcionário</strong></a></p>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOME</th>
+                <th>IDADE</th>
+                <th>CPF</th>
+                <th>CARGO</th>
+                <th>CARGA HORARIA</th>
+                <th>SALARIO</th>
+                <th>LINGUAGEM</th>
+                <th>EQUIPE</th>
+                <th>EDITAR</th>
+                <th>EXCLUIR</th>          
+            </tr>
+        </thead>
+        <tbody>
+            {% for funcionario in lista %}
+            <tr>
+                <td>{{funcionario[0]}}</td>
+                <td>{{funcionario[1]}}</td>
+                <td>{{funcionario[2]}}</td>
+                <td>{{funcionario[3]}}</td>
+                <td>{{funcionario[4]}}</td>
+                <td>{{funcionario[5]}}</td>
+                <td>{{funcionario[6]}}</td>
+                <td>{{funcionario[7]}}</td>
+                <td>{{funcionario[8]}}</td>
+                <td><a href="/editar?id={{funcionario[0]}}" class="btn-editar">Editar</a></td>
+                <td><a href="/excluir?id={{funcionario[0]}}" class="btn-excluir">Excluir</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
