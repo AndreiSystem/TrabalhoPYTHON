@@ -1,0 +1,134 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    background: url(../img/fundo.png);
+    background-size: cover;
+}
+
+
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+
+    background: white;
+
+
+}
+
+
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 200px;
+}
+
+.logo img {
+    margin-left: -160px;
+    width: 80%;
+    float: left;
+
+}
+
+.logo span {
+    width: 60%;
+    font-size: 20px;
+    float: right;
+    margin-top: 10px;
+}
+
+.title {
+    margin-top: 7%;
+    text-align: center;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(45deg, #163be0, #071659);
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+table {
+    width: 800px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+th,
+td {
+    padding: 15px;
+    background-color: rgba(16, 18, 141, 0.678);
+    color: #fff;
+}
+
+th {
+    text-align: left;
+}
+
+thead,
+th {
+    background-color: #2142d4;
+}
+
+.btn-button {
+    color: black;
+    padding: 1%;
+    background: white;
+    border-radius: 4px;
+    text-decoration: none;
+    box-shadow: 0 0 7px black;
+    border: 2px solid black;
+}
+
+.btn-editar {
+    color: white;
+    padding: 15%;
+    border-radius: 4px;
+    background-color: rgb(27, 184, 40);
+    text-decoration: none;
+}
+
+.btn-excluir {
+    margin-top: 10px;
+    color: white;
+    padding: 13%;
+    border-radius: 4px;
+    background-color: rgb(216, 29, 29);
+    text-decoration: none;
+}

@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+{% block content  %}
+<div class="container">
+    <p><a href="/cadastrar" class="btn-button"><strong>Novo usuario</strong></a></p>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOME</th>
+                <th>CPF</th>
+                <th>PROJETO</th>
+                <th>EQUIPE</th>
+                <th>LINGUAGEM</th>
+                <th>EDITAR</th>
+                <th>EXCLUIR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>GFHGV</td>
+                <td>FGVG</td>
+                <td>VVBT</td>
+                <td>GDGVFD</td>
+                <td>RTYUDFG</td>
+                <td><a href="/editar" class="btn-editar">Editar</a></td>
+                <td><a href="/excluir" class="btn-excluir">Excluir</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
