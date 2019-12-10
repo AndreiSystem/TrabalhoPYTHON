@@ -1,5 +1,5 @@
 from .conexao import Conexao
-
+from classes.model.equipes import Equipes
 
 class EquipesDao(Conexao):
 
@@ -8,9 +8,9 @@ class EquipesDao(Conexao):
         lista = self.cursor.fetchall()
         return lista
 
-    def inserir(self, equipe):
+    def inserir_equipe(self, equipe:Equipes):
         self.cursor.execute(
-            f'INSERT INTO equipe(projeto) values("{projeto}")')
+            f'INSERT INTO equipe(squad, projeto) values("{equipe.get_squad()}","{equipe.get_projeto()}")')
         self.connection.commit()
 
     def deletar_id(self, id):

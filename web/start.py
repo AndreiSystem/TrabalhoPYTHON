@@ -7,6 +7,7 @@ from classes.dao.equipes_dao import EquipesDao
 
 from classes.model.linguagem import Linguagem
 from classes.model.funcionario import Funcionario
+from classes.model.equipes import Equipes
 
 app = Flask(__name__)
 
@@ -60,7 +61,15 @@ def salvar_linguagem():
     start_linguagem = LinguagemDao()
     start_linguagem.inserir_linguagem(Linguagem(linguagem))
     return redirect ('/')
-    
+
+@app.route('/salvar_equipe', methods=['POST'])
+def salvar_equipe():
+    equipe = request.form['equipe']
+    projeto = request.form['projeto']
+
+    start_equipe = EquipesDao()
+    start_equipe.inserir_equipe(Equipes(equipe,projeto))
+    return redirect ('/')    
     
 
 
@@ -101,4 +110,4 @@ def salvar_editar():
 
     
 
-app.run()
+app.run(debug=True)
