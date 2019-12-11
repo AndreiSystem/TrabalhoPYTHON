@@ -66,6 +66,7 @@ nav {
     text-align: center;
     color: white;
 }
+
 /* home */
 html,
 body {
@@ -81,15 +82,14 @@ body {
 
 .container {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-table {margin-top: 30px;
-    width: 800px;
+table {
+    margin-top: 30px;
     border-collapse: collapse;
-    overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -98,15 +98,21 @@ td {
     padding: 15px;
     background-color: rgba(16, 18, 141, 0.678);
     color: #fff;
+
 }
 
+
 th {
-    text-align: left;
+    text-align: center;
 }
 
 thead,
 th {
     background-color: #2142d4;
+}
+
+.center {
+    text-align: center;
 }
 
 .btn-button {
@@ -116,16 +122,12 @@ th {
     border-radius: 4px;
     text-decoration: none;
     box-shadow: 0 0 7px black;
-    border: 2px solid black;
 }
 
-.btn-editar {
-    color: white;
-    padding: 15%;
-    border-radius: 4px;
-    background-color: rgb(27, 184, 40);
-    text-decoration: none;
-}
+
+
+
+
 
 .btn-excluir {
     margin-top: 10px;
@@ -134,19 +136,22 @@ th {
     border-radius: 4px;
     background-color: rgb(216, 29, 29);
     text-decoration: none;
+    box-shadow: 0 0 7px black;
 }
+
 /* Linguagem */
-h1 {color: white;
+h1 {
+    color: white;
     margin-top: 40px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
+
 /* formulario */
 .div-form {
     width: 100%;
     max-width: 600px;
     position: absolute;
-    margin-bottom: 5%;
     top: 80%;
     left: 50%;
     background: white;
@@ -155,10 +160,6 @@ h1 {color: white;
     box-sizing: border-box;
     border-radius: 8px;
     box-shadow: 0 0 20px #000000b3;
-}
-
-.form-div {
-    font-weight: bold;
 }
 
 .box-id {
@@ -188,24 +189,28 @@ h1 {color: white;
     padding: 12px 18px;
     border-radius: 2px;
 }
+
 .box-cargo {
     border: 1px solid gray;
     margin: 8px 0;
     padding: 12px 18px;
     border-radius: 2px;
 }
+
 .box-carga_horaria {
     border: 1px solid gray;
     margin: 8px 0;
     padding: 12px 18px;
     border-radius: 2px;
 }
+
 .box-salario {
     border: 1px solid gray;
     margin: 8px 0;
     padding: 12px 18px;
     border-radius: 2px;
 }
+
 .box-linguagem {
     border: 1px solid gray;
     margin: 8px 0;
@@ -214,6 +219,7 @@ h1 {color: white;
     font-weight: 800;
     color: rgb(59, 58, 58);
 }
+
 .box-equipe {
     border: 1px solid gray;
     margin: 8px 0;
@@ -254,6 +260,7 @@ h1 {color: white;
     text-transform: uppercase;
     font-size: 14px;
 }
+
 .box-cargo label {
     display: block;
     text-align: left;
@@ -261,6 +268,7 @@ h1 {color: white;
     text-transform: uppercase;
     font-size: 14px;
 }
+
 .box-carga_horaria label {
     display: block;
     text-align: left;
@@ -268,6 +276,7 @@ h1 {color: white;
     text-transform: uppercase;
     font-size: 14px;
 }
+
 .box-salario label {
     display: block;
     text-align: left;
@@ -275,6 +284,7 @@ h1 {color: white;
     text-transform: uppercase;
     font-size: 14px;
 }
+
 .box-linguagem label {
     display: block;
     text-align: left;
@@ -282,6 +292,7 @@ h1 {color: white;
     text-transform: uppercase;
     font-size: 14px;
 }
+
 .box-equipe label {
     display: block;
     text-align: left;
@@ -329,6 +340,7 @@ h1 {color: white;
     font-size: 18px;
     margin-top: 6px;
 }
+
 .box-cargo input,
 .box-cargo textarea {
     width: 100%;
@@ -338,6 +350,7 @@ h1 {color: white;
     font-size: 18px;
     margin-top: 6px;
 }
+
 .box-carga_horaria input,
 .box-carga_horaria textarea {
     width: 100%;
@@ -347,6 +360,7 @@ h1 {color: white;
     font-size: 18px;
     margin-top: 6px;
 }
+
 .box-salario input,
 .box-salario textarea {
     width: 100%;
@@ -356,6 +370,7 @@ h1 {color: white;
     font-size: 18px;
     margin-top: 6px;
 }
+
 .box-linguagem input,
 .box-linguagem textarea {
     width: 100%;
@@ -365,6 +380,7 @@ h1 {color: white;
     font-size: 18px;
     margin-top: 6px;
 }
+
 .box-equipe input,
 .box-equipe textarea {
     width: 100%;
@@ -374,13 +390,29 @@ h1 {color: white;
     font-size: 18px;
     margin-top: 6px;
 }
+
 .btn-salvar {
     color: white;
-    padding: 2% 5% ;
+    padding: 2.5% 3.5%;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background-color: rgb(27, 184, 40);
+    text-decoration: none;
+    box-shadow: 0 0 7px black;
+}
+
+.btn-editar {
+    color: white;
+    padding: 15%;
     border-radius: 4px;
     background-color: rgb(27, 184, 40);
     text-decoration: none;
+    box-shadow: 0 0 7px black;
 }
+
+
 /* linguagem */
 .form {
     font-weight: 700;
@@ -388,7 +420,7 @@ h1 {color: white;
     max-width: 600px;
     position: absolute;
     margin-bottom: 5%;
-    top: 40%;
+    top: 50%;
     left: 50%;
     background: white;
     transform: translate(-50%, -50%);
@@ -401,10 +433,11 @@ h1 {color: white;
 .form-div {
     font-weight: bold;
 }
+
 .btn-salvando {
     margin-top: 50px;
     color: white;
-    padding: 2% 5% ;
+    padding: 2% 5%;
     border-radius: 4px;
     background-color: rgb(27, 184, 40) !important;
     text-decoration: none;

@@ -17,9 +17,9 @@
             <input type="text" name="idade" id="idade" required>
         </div>
         <div class="box-idade">
-                <label for="idade">Cpf: </label>
-                <input type="text" name="cpf" id="cpf" required>
-            </div>
+            <label for="idade">Cpf: </label>
+            <input type="text" name="cpf" id="cpf" required>
+        </div>
         <div class="box-cargo">
             <label for="cargo">Cargo: </label>
             <input type="text" name="cargo" id="cargo" required>
@@ -34,15 +34,15 @@
         </div>
         <select class="box-linguagem " name="linguagem_id">
             <option selected><strong>SELECIONE UMA LINGUAGEM</strong></option>
-            {% for linguagem in lista_linguagem: %} 
-                <option value="{{linguagem[0]}}">{{linguagem[1]}}</option> 
+            {% for linguagem in lista_linguagem: %}
+            <option value="{{linguagem[0]}}">{{linguagem[1]}}</option>
             {% endfor %}
 
         </select>
         <select class="box-equipe" name="equipe_id">
-            <option><strong>SELECIONE A EQUIPE</strong></option> 
+            <option><strong>SELECIONE A EQUIPE</strong></option>
             {% for equipe in lista_equipe %}
-                <option value="{{equipe[0]}}">{{equipe[1]}}</option> 
+            <option value="{{equipe[0]}}">{{equipe[1]}}</option>
             {% endfor %}
 
         </select>
