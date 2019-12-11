@@ -1,7 +1,9 @@
-from .pessoa import Pessoa
-from .equipes import Equipes
-from .linguagem import Linguagem
+#importação dos pacotes
 
+#---Classe Pessoa para fazer herança com a Classe Funcionário
+from .pessoa import Pessoa
+
+# Classe funcionário para receber os dados do funcionário (nome, cpf, idade etc...)
 class Funcionario(Pessoa):
     def __init__(self, nome, cpf, idade, salario, carga_horaria, cargo, linguagem_id:int, equipe_id:int, id=None):
         super().__init__(nome, cpf, idade)
@@ -13,7 +15,6 @@ class Funcionario(Pessoa):
         self.id = id
 
 
-    
     # método para retornar salario:
     def get_salario(self):
         return self.salario
@@ -29,11 +30,12 @@ class Funcionario(Pessoa):
     # método para retornar linguagem:
     def get_linguagem(self):
         return self.linguagem_id
+
     # método para retornar equipe:
     def get_equipe(self):
         return self.equipe_id
 
-    # método para retornar id:
+    # método para retornar id caso seja necessário:
     def get_id(self):
         return self.id
 
